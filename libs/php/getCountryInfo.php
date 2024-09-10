@@ -38,7 +38,7 @@ curl_close($ch);
 	//third api
 	$ch = curl_init();
  
-	$url='http://api.geonames.org/oceanJSON?';
+	$url = 'http://api.geonames.org/oceanJSON?formatted=true&latitude=' . $_REQUEST['latitude'] . '&longitude=' . $_REQUEST['longitude'] . '&username=smm488 &style=full';
 
 	 
 	
