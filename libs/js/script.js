@@ -5,28 +5,24 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				country: $('#selCountry').val(),
-				postcode: $('#selPostCode').val(),
-				placename:$('#selPlaceName').val(),
-				latitude:$('#selLatitude').val(),
-				longitude:$('selLongitude').val(),
+				lat: $('#latitude').val(),
+				lng: $('#logitude').val(),
+		
 			},
 			success: function(result) {
 
 				console.log(JSON.stringify(result));
-
-				if (result.status.name == "ok"){
-					$('#txtCountry').html(result['data'][0]['country']);
-					$('#txtPlaceName').html(result['data'][0]['plcaname']);
+		
+				if (result.status.name == "ok") {
+		
 					$('#txtLatitude').html(result['data'][0]['latitude']);
 					$('#txtLongitude').html(result['data'][0]['longitude']);
 				}
-			
+				
 			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				// your error code
-				console.log("AJAX Request Failed");
+			error:function(jqHRX, textSatus, errorThrown){
+				console.log("AJAX failed");
 			}
 		}); 
-	
+	 
 	}); 
