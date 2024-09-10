@@ -5,7 +5,7 @@
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				lat: $('#country').val(),
+				lat: $('#latitude').val(),
 				lng: $('#logitude').val(),
 		
 			},
