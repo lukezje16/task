@@ -30,78 +30,39 @@
 		   </tr>
 
 		  
-		   <tr>
-			<td >1. Siblings</td>
+		
+		  <tr id="tr">
+			<td>Ocean</td>
 			<td>
 				
-				<label for="selCountry" id="txtCountry">Country</label><br />
-				<!--
-				<select id="selCountry">
-			    <option value="GB">Great Britain</option>
-			    <option value="FR">France</option>
-			    <option value="DE">Germany</option>
-			    <option value="US">USA</option>
-	        	</select>
-			</td>
-			<td>
-				<button  class="btn btn-primary" id="btnOne" type="button">submit</button>
-			</td>
-		   </tr> -->
-
-		
-		   <tr id="tr">
-			<td>2. Hierarchy</td>
-                <td>
-                    
-                    <label for="selPlaceName" id="txtPlaceName">Place Name or Attraction</label><br />
-					<!--
-                    <select id="selPlaceName" name="selPlaceName">
-                        <option value="" selected>Bromley</option>
-                        <option value="2656065">Beckenham</option>
-                        <option value="2653123">Chislehurst</option>
-                        <option value="2643743">London</option>
-                        <option value="2653941">Cambridge</option>
-                        <option value="6952216">Cambridge Railway Station</option>
-                        <option value="2643121">Manea</option>
-                        <option value="6446719">Menton</option>
-                        <option value="2510281">Torremolinos</option>
-                        <option value="10297765">La Bateria Park</option>
-                        <option value="3067696">Prague</option>
-                        <option value="6955411">Mustek</option>
-                    </select>
-                </td>
-			<td>
-				<button class="btn btn-primary" id="btnSubmit">submit</button>
-			</td>
-		   </tr> -->
-
-
-		   <tr id="tr">
-			<td>3. Ocean</td>
-			<td>
-				<!-- Set Up Latitude with 40.78343 as default -->
-				<label for="selLatitude" id="txtLatitude">Latitude</label><br />
+				<label for="latitude" >Latitude</label><br />
 				<input type="number" id="latitude" min="-90.00000" max="90.00000" value="40.78343" step="any"
-					name="selLatitude" />
-
+					name="latitude" />
+			
 				<p></p>
-				<!-- Set Up Longitude with -43.96625 as default -->
-				<label for="selLongitude" id="txtLongitude">Longitude</label><br />
+				
+				<label for="longitude" >Longitude</label><br />
 				<input type="number" id="longitude" min="-180.00000" max="180.00000" value="-43.96625" step="any"
-					name="selLongitude" />
+					name="longitude" />
 			</td>
 			<td>
-				<button class="btn btn-primary" type="button" id="btnRun">submit</button>
-			</td>
-		   </tr>
-		   
-		   <tr>
-			<td colspan="3"id="divResults"></td>
-		</tr>
+				<button class="btn btn-primary" type="button" id="btnRun">submit</button></td>
+		  </tr>
 		  
 		</table>
 		
+		<br><br>
 
+		<div id="divResults">
+			<table>
+				<tr>
+					<td id="txtLatitude"></td>
+				</tr>
+				<tr>
+					<td id="txtLongitude"></td>
+				</tr>
+			</table>
+		</div>
     
 
 		<script  src="libs/js/jquery-2.2.3.min.js"></script>
