@@ -1,20 +1,20 @@
-$('#oceanBtn').click(function() {
+$('#postalBtn').click(function() {
 
 	$.ajax({
-		url: "libs/php/getCountryInfo.php",
+		url: "libs/php/getPostalCode.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			lat: $('#latitude').val(),
-			lng: $('#logitude').val(),
+			postalcode: $('#selPostalCode').val(),
+			country: $('#selCountry').val(),
 		},
 		success: function(result) {
 
 			console.log(JSON.stringify(result));
 
 			if (result.status.name == "ok") {
-				$('#txtLatitude').html(result['data'][0]['lat']);
-				$('#txtLongitude').html(result['data'][0]['lng']);
+				$('#txtPostalCode').html(result['data'][0]['postalcode']);
+				$('#txtCountry').html(result['data'][0]['country']);
 			}
 		
 		},

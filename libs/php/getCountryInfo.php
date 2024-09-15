@@ -1,7 +1,5 @@
 <?php 
 
-//ocean api
-
     ini_set('display_errors', 'On');
 
     error_reporting(E_ALL);
@@ -12,7 +10,7 @@
 
  
 
-    $url='http://api.geonames.org/oceanJSON?&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=skwembeprsmm488 &style=full';
+    $url='http://api.geonames.org/oceanJSON?&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=smm488 &style=full';
 
  
 
