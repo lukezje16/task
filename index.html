@@ -28,28 +28,54 @@
 			<th>API description</th>
 		   </tr>
 
-		  <tr id="tr">
-            <td>PostalCodeLook</td>
-			<td>Country: 	
-			<select id="selCountry">
-				<option value="GB">Great Britain</option>
-				<option value="FR">France</option>
-				<option value="DE">Germany</option>
-				<option value="US">USA</option>
-			</select>
-
-			<p></p>
-
-			<label>PostalCode:
-				<input id="selPostCode" size="10" type="text">
-			 </label>
-		  </td>
-		 
-		  <td><button class="btn btn-primary" type="button" id="postalBtn">submit</button></td>
+		   <tr>
+			<td>1. Siblings</td>
+			<td>
+				
+				<label for="selCountry">Country</label><br />
+				<select id="selCountry">
+					<option value="2635167" selected>United Kingdom</option>
+					<option value="3017382">France</option>
+					<option value="2510769">Spain</option>
+					<option value="2921044">Germany</option>
+					<option value="3077311">Czechia</option>
+					<option value="2264397">Portugal</option>
+					<option value="3175395">Italy</option>
+					<option value="2963597">Ireland</option>
+					<option value="2750405">Netherlands</option>
+					<option value="2017370">Russia</option>
+					<option value="298795">Turkey</option>
+				</select>
+			</td>
+			<td><button id="siblingsBtn" class="btn btn-primary">Submit</button></td>
 		  </tr>
+
+		   <tr id="tr">
+			<td>2. Hierarchy</td>
+			<td>
+				
+				<label for="selPlaceName">Place Name </label><br />
+				<select id="selPlaceName">
+					<option value="2654588" selected>Bromley</option>
+					<option value="2656065">Beckenham</option>
+					<option value="2653123">Chislehurst</option>
+					<option value="2643743">London</option>
+					<option value="2653941">Cambridge</option>
+					<option value="6952216">Cambridge Railway Station</option>
+					<option value="2643121">Manea</option>
+					<option value="6446719">Menton</option>
+					<option value="2510281">Torremolinos</option>
+					<option value="10297765">La Bateria Park</option>
+					<option value="3067696">Prague</option>
+					<option value="6955411">Mustek</option>
+				</select>
+			</td>
+			<td><button id="hierarchyBtn" class="btn btn-primary" >Submit</button></td>
+		</tr>
+
 	
 		  <tr id="tr">
-			<td>Ocean</td>
+			<td>3.Ocean</td>
 			<td>
 				
 				<label for="latitude" >Latitude</label><br />
@@ -63,7 +89,7 @@
 					name="longitude" />
 			</td>
 			<td>
-				<button class="btn btn-primary" type="button" id="oceanBtn">submit</button></td>
+				<button class="btn btn-primary" type="button" id="oceanBtn">Submit</button></td>
 		  </tr>
 		  
 		
@@ -75,19 +101,19 @@
 			
 			<table>
 				<tr>
-					<td id="txtLatitude">
-					</td>
+					<td id="txtLatitude"></td>
 				</tr>
 
 				<tr>
 					<td id="txtLongitude"></td>
 				</tr>
-				<tr>
+				
 					<tr>
 						<td id="txtCountry"></td>
 					</tr>
+
 				</tr>
-					<td id="txtPostalCode"></td>
+					<td id="txtPlaceName"></td>
 				</tr>
 			</table>
 
@@ -95,8 +121,9 @@
     
 
 		<script  src="libs/js/jquery-2.2.3.min.js"></script>
-		<script  src="libs/js/script.js"></script>
-		<script  src="libs/js/postalCode.js"></script>
+		<script  src="libs/js/ocean.js"></script>
+		<script  src="libs/js/siblings.js"></script>
+		<script  src="libs/js/hierarchy.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	</body>
 

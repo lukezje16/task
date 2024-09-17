@@ -1,11 +1,10 @@
-$('#postalBtn').click(function() {
+$('#siblingsBtn').click(function() {
 
 	$.ajax({
-		url: "libs/php/getPostalCode.php",
+		url: "libs/php/getSiblings.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			postalcode: $('#selPostalCode').val(),
 			country: $('#selCountry').val(),
 		},
 		success: function(result) {
@@ -13,14 +12,14 @@ $('#postalBtn').click(function() {
 			console.log(JSON.stringify(result));
 
 			if (result.status.name == "ok") {
-				$('#txtPostalCode').html(result['data'][0]['postalcode']);
-				$('#txtCountry').html(result['data'][0]['country']);
+		
+				$('#txtCountry').html(result);
 			}
 		
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			// your error code
-			console.log("AJAX failed:" );
+			console.log("AJAX failed siblings api:" );
 		}
 	}); 
 
