@@ -10,7 +10,8 @@ $executionStartTime = microtime(true);
 
 
 
-$url='http://http://api.geonames.org/siblingsJSON?geonameId=3017382&username=smm488&style=full';
+$url = 'http://api.geonames.org/postalCodeLookupJSON?formatted=true&postalcode=' . $_REQUEST['postalcode'] . '&country=' . $_REQUEST['country'] . '&username=smm488&style=full';
+
 
 
 

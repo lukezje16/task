@@ -6,6 +6,7 @@ $('#siblingsBtn').click(function() {
 		dataType: 'json',
 		data: {
 			country: $('#selCountry').val(),
+			postalcode: $('#selPostalCode').val(),
 		},
 		success: function(result) {
 
@@ -14,6 +15,7 @@ $('#siblingsBtn').click(function() {
 			if (result.status.name == "ok") {
 		
 				$('#txtCountry').html(result);
+				$('#txtPostalCode').html(result);
 			}
 		
 		},
