@@ -5,8 +5,8 @@ $('#oceanBtn').click(function() {
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			lat: $('#latitude').val(),
-			lng: $('#logitude').val(),
+			lat: $('#selLatitude').val(),
+			lng: $('#selLogitude').val(),
 		},
 		success: function(result) {
 

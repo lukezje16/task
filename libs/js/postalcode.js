@@ -1,7 +1,7 @@
 $('#siblingsBtn').click(function() {
 
 	$.ajax({
-		url: "libs/php/getSiblings.php",
+		url: "libs/php/getPostalCode.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
