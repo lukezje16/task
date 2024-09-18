@@ -69,9 +69,9 @@
 				</select>
 				<p></p>
 				<label for="selPostalCode">PostalCode</label>
-				<input id="selPostalCode" size="10" type="text">
+				<input id="selPostalCode"  size="10" type="text">
 			</td>
-			<td><button id="siblingsBtn" class="btn btn-primary">Submit</button></td>
+			<td><button id="siblingsBtn" class="btn btn-primary" type="button">Submit</button></td>
 		  </tr>
 
 		   <tr id="tr">
@@ -94,7 +94,7 @@
 					<option value="6955411">Mustek</option>
 				</select>
 			</td>
-			<td><button id="hierarchyBtn" class="btn btn-primary" >Submit</button></td>
+			<td><button id="hierarchyBtn" class="btn btn-primary" type="button" >Submit</button></td>
 		</tr>
 
 	
@@ -103,15 +103,15 @@
 			<td>
 				
 				<label for="selLatitude" >Latitude</label><br />
-				<input type="number" id="selLatitude" min="-90.00000" max="90.00000" value="40.78343" step="any"/>
+				<input type="number" id="txtLatitude" name="selLatitude" min="-90.00000" max="90.00000" value="40.78343" step="any"/>
 			
 				<p></p>
 				
 				<label for="selLongitude" >Longitude</label><br />
-				<input type="number" id="selLongitude" min="-180.00000" max="180.00000" value="-43.96625" step="any"/>
+				<input type="number" id="txtLongitude" name="selLongitude" min="-180.00000" max="180.00000" value="-43.96625" step="any"/>
 			</td>
 			
-			<td><button class="btn btn-primary" id="oceanBtn">Submit</button></td>
+			<td><button class="btn btn-primary" id="btnRun" type="button">Submit</button></td>
 		  </tr>
 		  
 		
@@ -119,17 +119,16 @@
 		
 		<br><br>
 
-		<div id="divResults">
+		
 			
-			<table>
+			<table class="results">
 				<tr>
-					<td id="txtLatitude"></td>
+					<td ><strong>Results</strong></td>
 				</tr>
-				<tr>
-					<td id="txtLongitude"></td>
-				</tr>
+		
 				
 					<tr>
+						<td>PostalCode:</td>
 						<td id="txtCountry"></td>
 					</tr>
 					<tr>
@@ -137,11 +136,18 @@
 					</tr>
 
 				</tr>
-					<td id="txtGeonameID"></td>
+				<tr>
+				 <td>Hierarchy:</td>
+				 <td id="txtGeonameID"></td>
+				</tr>
+
+				<tr></tr>
+					<td>Ocean:</td>
+					<td id="txtOcean"></td>
 				</tr>
 			</table>
 
-		</div>
+		
     
 
 		<script  src="libs/js/jquery-2.2.3.min.js"></script>

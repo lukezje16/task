@@ -1,4 +1,4 @@
-$('#oceanBtn').click(function() {
+$('#btnRun').click(function() {
 
 	$.ajax({
 		url: "libs/php/getCountryInfo.php",
@@ -13,8 +13,7 @@ $('#oceanBtn').click(function() {
 			console.log(JSON.stringify(result));
 
 			if (result.status.name == "ok") {
-				$('#txtLatitude').html(result);
-			    $('#txtLongitude').html(result);
+				$('#txtOcean').html(result['data']['ocean']['name']);
 			}
 		
 		},
