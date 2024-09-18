@@ -1,7 +1,7 @@
 $('#oceanBtn').click(function() {
 
 	$.ajax({
-		url: "libs/php/getOcean.php",
+		url: "libs/php/getCountryInfo.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {

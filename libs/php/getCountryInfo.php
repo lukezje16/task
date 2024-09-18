@@ -10,7 +10,7 @@
 
  
 
-    $url='http://api.geonames.org/oceanJSON?&lat='.$_REQUEST['lat'].'&lng='.$_REQUEST['lng'].'&username=smm488 &style=full';
+    $url='http://api.geonames.org/oceanJSON?&lat='.$_REQUEST['lat'].'&lng='.$_REQUEST['lng'].'&username=smm488&style=full';
 
  
 
