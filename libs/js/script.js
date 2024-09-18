@@ -5,8 +5,8 @@ $('#btnRun').click(function() {
 		type: 'POST',
 		dataType: 'json',
 		data: {
-			lat: $('#selLatitude').val(),
-			lng: $('#selLogitude').val(),
+			lat: $('#txtLatitude').val(),  // Correct input ID for latitude
+            lng: $('#txtLongitude').val()  // Correct input ID for longitude
 		},
 		success: function(result) {
 

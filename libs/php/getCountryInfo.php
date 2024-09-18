@@ -1,60 +1,55 @@
-<?php 
+<?php
 
-    ini_set('display_errors', 'On');
+ini_set('display_errors', 'On');
 
-    error_reporting(E_ALL);
+error_reporting(E_ALL);
 
- 
 
-    $executionStartTime = microtime(true);
 
- 
+$executionStartTime = microtime(true);
 
-    $url='http://api.geonames.org/oceanJSON?&lat=' .$_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=smm488&style=full';
 
- 
 
-    $ch = curl_init();
+$url = 'http://api.geonames.org/oceanJSON?&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=smm488&';
 
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    curl_setopt($ch, CURLOPT_URL,$url);
+$ch = curl_init();
 
- 
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-    $result=curl_exec($ch);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
- 
+curl_setopt($ch, CURLOPT_URL, $url);
 
-    curl_close($ch);
 
- 
 
-    $decode = json_decode($result,true);    
+$result = curl_exec($ch);
 
- 
 
-    $output['status']['code'] = "200";
 
-    $output['status']['name'] = "ok";
+curl_close($ch);
 
-    $output['status']['description'] = "success";
 
-    $output['status']['returnedIn'] = intval((microtime(true) - $executionStartTime) * 1000) . " ms";
 
-    $output['data'] = $decode;
+$decode = json_decode($result, true);
 
-   
 
-    header('Content-Type: application/json; charset=UTF-8');
 
- 
+$output['status']['code'] = "200";
 
-    echo json_encode($output);
+$output['status']['name'] = "ok";
 
- 
+$output['status']['description'] = "success";
 
-?>
+$output['status']['returnedIn'] = intval((microtime(true) - $executionStartTime) * 1000) . " ms";
 
+$output['data'] = $decode;
+
+
+
+header('Content-Type: application/json; charset=UTF-8');
+
+
+
+echo json_encode($output);
