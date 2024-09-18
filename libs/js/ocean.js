@@ -14,7 +14,7 @@ $('#oceanBtn').click(function() {
 
 			if (result.status.name == "ok") {
 				$('#txtLatitude').html(result);
-				$('#txtLongitude').html(result);
+			    $('#txtLongitude').html(result);
 			}
 		
 		},

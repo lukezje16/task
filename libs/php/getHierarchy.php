@@ -10,8 +10,7 @@ $executionStartTime = microtime(true);
 
 
 
-$url='http://api.geonames.org/hierarchyJSON?formatted=true&placeName=' . $_REQUEST['placeName']  . '&username=smm488 &style=full';
-
+$url='http://api.geonames.org/hierarchyJSON?formatted=true&geonameId=2657896&username=smm488&style=full';
 
 
 $ch = curl_init();

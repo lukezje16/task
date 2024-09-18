@@ -10,7 +10,7 @@ $executionStartTime = microtime(true);
 
 
 
-$url='http://api.geonames.org/siblingsJSON?formatted=true&country=' . $_REQUEST['country']  . '&username=smm488&style=full';
+$url='http://http://api.geonames.org/siblingsJSON?geonameId=3017382&username=smm488&style=full';
 
 
 

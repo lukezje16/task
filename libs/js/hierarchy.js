@@ -1,7 +1,7 @@
 $('#hierarchyBtn').click(function() {
 
 	$.ajax({
-		url: "libs/php/getOcean.php",
+		url: "libs/php/getHierarchy.php",
 		type: 'POST',
 		dataType: 'json',
 		data: {
@@ -13,7 +13,7 @@ $('#hierarchyBtn').click(function() {
 			console.log(JSON.stringify(result));
 
 			if (result.status.name == "ok") {
-				$('#txtPlaceName').html(result);
+				$('#txtGeonameID').html(result);
 				
 			}
 		
